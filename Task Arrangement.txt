@@ -1,0 +1,41 @@
+---------------------
+|  Task Arrangement |
+---------------------
+
+JJ
+--------------
+- Backend
+- Amazon DynamoDB
+- Amazon S3
+- AWS Lambda
+
+Backend
+- S3 (ads-video)
+- dynamodb (user-ads) - userid (PK), user_video_link, video priority
+- lambda will concatatenate ads according to scheduling policy 
+(trigger, when anyone upload new ads)
+
+
+
+ZX
+--------------
+- Front End
+- Amplify - (Amazon Cognito)
+
+3 website
+- Login/Register
+
+- Upload (Charge) 
+(Upload the ads that user create mp4) 
+(Throw s3 bucket, return link, link need to save inside DynamoDB)
+      -higher median low
+- CRUD 
+
+- Display (Expense) 
+(Download ads from dynamodb (fix location, name) --> Request lambda generate)
+
+
+
+MX
+--------------
+- About me
