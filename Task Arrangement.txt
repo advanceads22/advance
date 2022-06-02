@@ -12,6 +12,28 @@ JJ
 Backend
 - S3 (ads-video)
 - dynamodb (user-ads) - userid (PK), user_video_link, video priority
+
+
+{ 
+  "video_timestamp": { 
+    "N": "101010101"
+  },
+  "expired_date": {
+    "N": "1010101022"
+  },
+  "priority": {  (user)
+    "S": "High"
+  },
+  "user_id": {
+    "S": "jj0002"
+  },
+  "video_s3_bucket_url": {
+    "S": "arn::"
+  }
+}
+
+CRUD - Create(add) Read(display, get, getid) Update(add) Delete(delete)
+
 - lambda will concatatenate ads according to scheduling policy 
 (trigger, when anyone upload new ads)
 
