@@ -2,6 +2,15 @@
 |  Task Arrangement |
 ---------------------
 
+Lalaport (monitor)
+
+- Upload ads (post ads in mp4, select priority) - client
+- Display ads () - displayer
+
+
+
+
+
 JJ
 --------------
 - Backend
@@ -38,8 +47,24 @@ CRUD - Create(add) Read(display, get, getid) Update(add) Delete(delete)
 (trigger, when anyone upload new ads)
 
 
+------------
+displayer
+1) request
+   a) dynamo db --> random number, +timestamp
+2) sort video link
+   b) send (a) to user
+   c) every 5 seconds use api update(a)
+   d) backend --> check is it exist on dynamodb, (if exist) update the displayer display time. 
+                  If timestamp too long, dont update, do (a) again
+   e) after update, remove the entry on dynamodb, then repeat(a)
+   
+3) retrieve from bucket
 
-ZX
+4) create a api 
+
+
+
+ZX 
 --------------
 - Front End
 - Amplify - (Amazon Cognito)
